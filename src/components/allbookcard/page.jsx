@@ -1,5 +1,6 @@
 import { Card } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AllBooksCard = ({ book }) => {
@@ -22,9 +23,11 @@ const AllBooksCard = ({ book }) => {
           <div className="absolute bottom-0 right-0 flex flex-col items-end gap-2 bg-black/50 p-4">
             <p className="text-lg font-semibold text-white">{book.author}</p>
 
-            <button className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-gray-200 cursor-pointer">
+            <Link
+            href={`/bookdetails/${book.id}`}
+            className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-gray-200 cursor-pointer">
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       </Card>
