@@ -18,8 +18,8 @@ const NavbarPage = () => {
 
         <div className="flex-none">
           <ul className="menu menu-horizontal gap-2 px-1 ">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/all-books">All Books</Link></li>
+            <li className="text-sm font-semibold text-gray-500"><Link href="/">Home</Link></li>
+            <li className="text-sm font-semibold text-gray-500"><Link href="/all-books">All Books</Link></li>
           </ul>
         </div>
 
