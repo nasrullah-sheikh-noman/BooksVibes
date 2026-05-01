@@ -1,33 +1,33 @@
-import { Button, Card, CloseButton } from '@heroui/react';
-import Image from 'next/image';
-import React from 'react';
+import { Button, Card, CloseButton } from "@heroui/react";
+import Image from "next/image";
+import React from "react";
 
-const CardPage = ({book}) => {
+const CardPage = ({ book }) => {
   return (
     <div>
       {
-        <Card className="w-full items-stretch md:flex-row">
-      <div className="relative h-[140px] w-full shrink-0 overflow-hidden rounded-2xl sm:h-[120px] sm:w-[120px]">
-        <Image
-          alt="Cherries"
-          className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
-          loading="lazy"
-          src={book.image_url}
-          width="400"
-          height="400"
-        />
-      </div>
-      <div className="flex flex-1 flex-col gap-3">
-        <Card.Header className="gap-1">
-          <Card.Title className="pr-8">{book.title}</Card.Title>
-        </Card.Header>
-        <Card.Footer className="mt-auto flex w-full flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-col">
-            <span className="text-sm font-medium text-foreground">{book.author}</span>
+        <Card className="w-full mx-auto max-w-md overflow-hidden rounded-2xl bg-gray-100 p-5  items-center text-center">
+          <div className="relative h-96 w-full">
+            <Image
+              src={book.image_url}
+              alt={book.title}
+              fill
+              className="object-cover"
+            />
+
+            <div className="absolute top-0 left-0 w-full bg-black/50 p-4">
+              <h2 className="text-2xl font-bold text-white">{book.title}</h2>
+            </div>
+
+            <div className="absolute bottom-0 right-0 flex flex-col items-end gap-2 bg-black/50 p-4">
+              <p className="text-lg font-semibold text-white">{book.author}</p>
+
+              <button className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-gray-200 cursor-pointer">
+                View Details
+              </button>
+            </div>
           </div>
-        </Card.Footer>
-      </div>
-    </Card>
+        </Card>
       }
     </div>
   );
