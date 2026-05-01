@@ -1,6 +1,6 @@
-import { Button, Card, CloseButton } from "@heroui/react";
+`use client`;
+import { Card } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
 
 const CardPage = ({ book }) => {
   return (
@@ -13,6 +13,7 @@ const CardPage = ({ book }) => {
               alt={book.title}
               fill
               className="object-cover"
+               sizes="(max-width: 768px) 100vw, 50vw"
             />
 
             <div className="absolute top-0 left-0 w-full bg-black/50 p-4">
