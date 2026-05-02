@@ -13,20 +13,18 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Books Vibes",
-  description: "A book management system application",
+  description: "A book management system apps",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
-      data-theme = "light"
+      data-theme="light"
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <main>
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
