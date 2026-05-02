@@ -1,15 +1,14 @@
-
-import NotFoundPage from "@/app/not-found";
 import { DetailsId } from "@/lib/func/func";
 import { Card } from "@heroui/react";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const BookDetailsPage = async ({ params }) => {
   const { id } = await params;
   const bookDetails = await DetailsId(id);
 
   if(!bookDetails) {
-    NotFoundPage();
+    notFound();
   }
 
   return (

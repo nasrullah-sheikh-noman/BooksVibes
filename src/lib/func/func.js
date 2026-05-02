@@ -8,9 +8,7 @@ const API = async () => {
 
 export const DetailsId = async (id) => {
   const res = await fetch(`https://books-vibes-server.onrender.com/Books/${id}`);
-  if (!res.ok) {
-    return null;
-  }
+  if (!res.ok) return null;
   const books = await res.json();
   return books;
 };
