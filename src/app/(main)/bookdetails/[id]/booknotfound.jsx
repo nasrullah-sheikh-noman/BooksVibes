@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NotFoundPage = () => {
+const BookNotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div className="text-center ">
@@ -30,4 +30,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default BookNotFound;
