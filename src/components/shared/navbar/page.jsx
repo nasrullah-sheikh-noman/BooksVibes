@@ -1,3 +1,4 @@
+import BorderlinePage from "@/ui/pagetoggole/page";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,12 +17,7 @@ const NavbarPage = () => {
           </Link>
         </div>
 
-        <div className="flex-none">
-          <ul className="menu menu-horizontal gap-2 px-1 ">
-            <li className="text-sm font-semibold text-gray-500"><Link href="/">Home</Link></li>
-            <li className="text-sm font-semibold text-gray-500"><Link href="/all-books">All Books</Link></li>
-          </ul>
-        </div>
+        <BorderlinePage/>
 
         <div className="flex-1 flex justify-end gap-2 items-center">
           <input
